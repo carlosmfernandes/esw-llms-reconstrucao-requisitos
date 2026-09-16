@@ -1,0 +1,22 @@
+<!-- STATUS: OK -->
+# CT28 — eachWeekOfInterval (anthropic/claude-sonnet-5)
+
+## Resposta do LLM
+
+# Análise do código: `eachWeekOfInterval`
+
+## 1. Requisito funcional
+
+A função tem como objetivo **gerar uma lista de datas correspondentes ao início de cada semana** compreendida dentro de um intervalo de datas fornecido (do início ao fim, inclusive).
+
+Comportamentos especificados:
+- Permite configurar **qual dia da semana é considerado "início da semana"** (via `WeekOptions`, delegado a `startOfWeek`).
+- Permite **pular semanas** através de um `step` (por exemplo, retornar uma semana sim, uma não).
+- Se o `step` for `0`, retorna uma lista vazia.
+- Se o `step` for negativo, o valor absoluto é usado como incremento, mas o resultado final é **invertido** (do fim para o início).
+- Se `start` do intervalo for
+
+## Gabarito oficial (date-fns)
+
+- **summary**: Return the array of weeks within the specified time interval.
+- **description**: Return the array of weeks within the specified time interval.

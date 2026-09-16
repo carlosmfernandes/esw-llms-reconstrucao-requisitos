@@ -1,0 +1,37 @@
+<!-- STATUS: OK -->
+# CT24 — eachDayOfInterval (anthropic/claude-sonnet-5)
+
+## Resposta do LLM
+
+# Análise da função `eachDayOfInterval`
+
+## 1. Requisito funcional
+
+A função gera **um array contendo todos os dias (datas) compreendidos dentro de um intervalo especificado**, do início ao fim, com a possibilidade de definir um passo (intervalo em dias) entre as datas retornadas.
+
+Requisitos específicos observados no código:
+- Deve funcionar corretamente independentemente da ordem cronológica dos limites do intervalo (ou seja, se `start` for posterior a `end`, a função deve lidar com isso e retornar as datas na ordem correta, do início real ao fim real).
+- Cada data retornada deve ser normalizada para o início do dia (horas, minutos, segundos e milissegundos zerados).
+- Deve permitir "pular" dias através de um `step` (passo), incluindo suporte a valores negativos de `step`, que invertem a ordem do resultado.
+- Se o `step` for `0`, a função deve retornar um array vazio (evitando loop infinito).
+- Deve suportar customização do tipo de data retornado e do fuso horário/contexto usado para construir as datas (via `options.in`), permitindo interoperabilidade com diferentes bibliotecas/tipos de data.
+
+## 2. Parâmetros de entrada
+
+- **`interval: IntervalType`** — Objeto representando o intervalo de datas, contendo as propriedades `start` (data inicial) e `end` (data final) do intervalo a ser percorrido.
+
+- **`options?: Options`** (opcional) — Objeto de configuração que estende `StepOptions` e `ContextOptions<DateType>`, contendo:
+  - **`step`** (via `StepOptions`) — Número que define o incremento (em dias) entre uma data e outra no array resultante. Pode ser negativo (inverte a ordem do resultado) ou zero (retorna array vazio). Se omitido, assume valor padrão `1`.
+  - **`in`** (via `ContextOptions<DateType>`) — Contexto/fábrica usado para normalizar o intervalo e construir as datas resultantes, permitindo customizar o tipo de objeto de data retornado (por exemplo, para suportar bibliotecas de data diferentes ou fusos horários específicos).
+
+## 3. Retorno
+
+A função retorna **um array de datas** (`EachDayOfIntervalResult<IntervalType, Options>`), onde:
+- Cada elemento representa um dia dentro do intervalo fornecido, com horário zerado (início do dia).
+- O tipo de cada elemento do array é determinado dinamicamente: se `options.in` for fornecido, o tipo será o `DateType` inferido a partir dele; caso contrário, será inferido a partir do tipo de `start` ou `end` do intervalo, ou `Date` como padrão.
+- A ordem do array reflete a ordem cronológica real do intervalo (do mais antigo para o mais recente), a menos que a inversão via `step` negativo ou intervalo invertido resulte em uma lista revertida
+
+## Gabarito oficial (date-fns)
+
+- **summary**: Return the array of dates within the specified time interval.
+- **description**: Return the array of dates within the specified time interval.

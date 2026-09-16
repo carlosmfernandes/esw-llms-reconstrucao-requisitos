@@ -1,0 +1,38 @@
+<!-- STATUS: OK -->
+# CT26 — differenceInMonths (anthropic/claude-sonnet-5)
+
+## Resposta do LLM
+
+## Análise do código: `differenceInMonths`
+
+### 1. Requisito funcional
+
+A função implementa o cálculo da **diferença em meses completos (inteiros)** entre duas datas. 
+
+Diferente de uma simples subtração de meses do calendário, a lógica considera se o "mês" realmente se completou, com base no dia do mês. Ou seja, se a data mais recente ainda não atingiu o mesmo dia do mês (ou um dia equivalente, considerando a regra especial de final de mês) que a data mais antiga, esse mês não é contado como completo.
+
+Há um tratamento especial para casos envolvendo o **último dia do mês** (ex.: 28/29 de fevereiro): quando a data posterior é o último dia de seu mês e a diferença calculada é de apenas 1 mês, a função ajusta o resultado para considerar esse mês como completo, evitando problemas ao comparar meses com diferentes quantidades de dias (como fevereiro vs. meses de 30/31 dias).
+
+O resultado é normalizado para nunca retornar `-0` (zero negativo), retornando `0` nesse caso.
+
+### 2. Parâmetros de entrada
+
+- **`laterDate: DateArg<Date> & {}`**  
+  Representa uma das duas datas a serem comparadas — nomeada como "mais recente", mas seu papel real na fórmula depende do sinal calculado internamente (a função lida com o sinal via `compareAsc`).
+
+- **`earlierDate: DateArg<Date> & {}`**  
+  Representa a outra data a ser comparada, chamada de "mais antiga".
+
+- **`options?: DifferenceInMonthsOptions | undefined`**  
+  Objeto opcional de configuração que estende `ContextOptions<Date>`. Contém a propriedade `in`, usada para normalizar as datas de entrada (possivelmente definindo o fuso horário/contexto no qual as datas devem ser interpretadas antes do cálculo).
+
+### 3. Retorno
+
+A função retorna um **`number`**: a quantidade de meses completos entre `laterDate` e `earlierDate`.
+
+- O valor é **positivo** se `laterDate` for posterior a `earlierDate`, e **negativo**
+
+## Gabarito oficial (date-fns)
+
+- **summary**: Get the number of full months between the given dates.
+- **description**: 

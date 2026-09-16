@@ -1,0 +1,27 @@
+<!-- STATUS: OK -->
+# CT19 — max (anthropic/claude-sonnet-5)
+
+## Resposta do LLM
+
+# Análise da função `max`
+
+## 1. Requisito funcional
+
+A função implementa o cálculo da **data mais recente (máxima) entre um conjunto de datas fornecidas**. 
+
+Regras de negócio identificadas no código:
+- Percorre todas as datas do array, convertendo cada uma para um objeto `Date` válido através de `toDate`.
+- Retorna a data cronologicamente mais tarde entre todas as fornecidas.
+- **Propagação de invalidez**: se qualquer uma das datas do array for inválida (equivalente a `NaN` quando convertida para número), o resultado final também será uma data inválida — ou seja, uma única data inválida "contamina" o resultado, independentemente de existirem outras datas válidas e mais recentes.
+- Se o array estiver vazio, o resultado também é inválido (`NaN`).
+- Suporta um mecanismo de "contexto" que define como a data resultante deve ser construída (permite customizar o tipo/classe de data retornada). Se nenhum contexto for passado explicitamente via `options.in`, o primeiro elemento do array que for um objeto é usado como referência para esse contexto.
+
+## 2. Parâmetros de entrada
+
+- **`dates: DateArg<DateType>[]`** — um array de valores representando datas (podem estar em diferentes formatos aceitos por `toDate`, como objetos `Date`, strings, timestamps, etc., dependendo da definição de `DateArg`). São as datas candidatas entre as quais se buscará a maior.
+- **`options?: MaxOptions<ResultDate>`** — parâmetro opcional que estende `ContextOptions<DateType>`. Contém a propriedade `in`, que permite especificar um contexto/fábrica para determinar o tipo de objeto de data a ser retornado no
+
+## Gabarito oficial (date-fns)
+
+- **summary**: Return the latest of the given dates.
+- **description**: Return the latest of the given dates.
