@@ -1,0 +1,31 @@
+id,funcao,tier,loc,branches,score,summary_oficial
+CT01,isLeapYear,facil,8,2,12,Is the given date in the leap year?
+CT02,getISODay,facil,7,1,9,Get the day of the ISO week of the given date.
+CT03,isWeekend,facil,7,1,9,Does the given date fall on a weekend?
+CT04,daysToWeeks,facil,5,1,7,Convert days to weeks.
+CT05,isValid,facil,3,2,7,Is the given date valid?
+CT06,getDayOfYear,facil,9,0,9,Get the day of the year of the given date.
+CT07,getQuarter,facil,8,0,8,Get the year quarter of the given date.
+CT08,differenceInSeconds,facil,8,0,8,Get the number of seconds between the given dates.
+CT09,isSameDay,facil,12,0,12,Are the given dates in the same day (and year and month)?
+CT10,endOfISOWeek,facil,9,0,9,Return the end of an ISO week for the given date.
+CT11,isSameWeek,medio,14,0,14,Are the given dates in the same week (and month and year)?
+CT12,toDate,medio,10,2,14,Convert the given argument to an instance of Date.
+CT13,compareAsc,medio,10,4,18,"Compare the two dates and return -1, 0 or 1."
+CT14,setYear,medio,14,3,20,Set the year to the given date.
+CT15,addDays,medio,15,3,21,Add the specified number of days to the given date.
+CT16,clamp,medio,21,0,21,Return a date bounded by the start and the end of the given interval.
+CT17,areIntervalsOverlapping,medio,17,3,23,Is the given time interval overlapping with another time interval?
+CT18,sub,medio,21,1,23,"Subtract the specified years, months, weeks, days, hours, minutes and seconds from the given date."
+CT19,max,medio,15,6,27,Return the latest of the given dates.
+CT20,startOfWeek,medio,21,5,31,Return the start of a week for the given date.
+CT21,getOverlappingDaysInIntervals,dificil,23,5,33,Get the number of days that overlap in two time intervals
+CT22,add,dificil,27,5,37,"Add the specified years, months, weeks, days, hours, minutes, and seconds to the given date."
+CT23,intervalToDuration,dificil,25,6,37,Convert interval to duration
+CT24,eachDayOfInterval,dificil,26,7,40,Return the array of dates within the specified time interval.
+CT25,differenceInBusinessDays,dificil,25,8,41,Get the number of business days between the given dates.
+CT26,differenceInMonths,dificil,30,7,44,Get the number of full months between the given dates.
+CT27,formatDuration,dificil,26,9,44,Formats a duration in human-readable format
+CT28,eachWeekOfInterval,dificil,34,7,48,Return the array of weeks within the specified time interval.
+CT29,addBusinessDays,dificil,37,11,59,Add the specified number of business days (mon - fri) to the given date.
+CT30,formatRelative,dificil,40,13,66,Represent the date in words relative to the given base date.

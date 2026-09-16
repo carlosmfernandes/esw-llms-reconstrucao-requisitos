@@ -1,0 +1,792 @@
+[
+  {
+    "id": "CT01",
+    "funcao": "isLeapYear",
+    "tier": "facil",
+    "loc": 8,
+    "branches": 2,
+    "score_complexidade": 12,
+    "arquivo_unidade": "unidades/isLeapYear.ts",
+    "gabarito": {
+      "category": "Year Helpers",
+      "summary": "Is the given date in the leap year?",
+      "description": "Is the given date in the leap year?",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to check"
+        },
+        {
+          "name": "options",
+          "desc": "The options object"
+        }
+      ],
+      "returns": "The date is in the leap year"
+    }
+  },
+  {
+    "id": "CT02",
+    "funcao": "getISODay",
+    "tier": "facil",
+    "loc": 7,
+    "branches": 1,
+    "score_complexidade": 9,
+    "arquivo_unidade": "unidades/getISODay.ts",
+    "gabarito": {
+      "category": "Weekday Helpers",
+      "summary": "Get the day of the ISO week of the given date.",
+      "description": "Get the day of the ISO week of the given date, which is 7 for Sunday, 1 for Monday etc.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The given date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The day of ISO week"
+    }
+  },
+  {
+    "id": "CT03",
+    "funcao": "isWeekend",
+    "tier": "facil",
+    "loc": 7,
+    "branches": 1,
+    "score_complexidade": 9,
+    "arquivo_unidade": "unidades/isWeekend.ts",
+    "gabarito": {
+      "category": "Weekday Helpers",
+      "summary": "Does the given date fall on a weekend?",
+      "description": "Does the given date fall on a weekend? A weekend is either Saturday (`6`) or Sunday (`0`).",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to check"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The date falls on a weekend"
+    }
+  },
+  {
+    "id": "CT04",
+    "funcao": "daysToWeeks",
+    "tier": "facil",
+    "loc": 5,
+    "branches": 1,
+    "score_complexidade": 7,
+    "arquivo_unidade": "unidades/daysToWeeks.ts",
+    "gabarito": {
+      "category": "Conversion Helpers",
+      "summary": "Convert days to weeks.",
+      "description": "Convert a number of days to a full number of weeks.",
+      "params": [
+        {
+          "name": "days",
+          "desc": "The number of days to be converted"
+        }
+      ],
+      "returns": "The number of days converted in weeks"
+    }
+  },
+  {
+    "id": "CT05",
+    "funcao": "isValid",
+    "tier": "facil",
+    "loc": 3,
+    "branches": 2,
+    "score_complexidade": 7,
+    "arquivo_unidade": "unidades/isValid.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Is the given date valid?",
+      "description": "Returns false if argument is Invalid Date and true otherwise. Argument is converted to Date using `toDate`. See [toDate](https://date-fns.org/docs/toDate) Invalid Date is a Date, whose time value is NaN.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to check"
+        }
+      ],
+      "returns": "The date is valid"
+    }
+  },
+  {
+    "id": "CT06",
+    "funcao": "getDayOfYear",
+    "tier": "facil",
+    "loc": 9,
+    "branches": 0,
+    "score_complexidade": 9,
+    "arquivo_unidade": "unidades/getDayOfYear.ts",
+    "gabarito": {
+      "category": "Day Helpers",
+      "summary": "Get the day of the year of the given date.",
+      "description": "Get the day of the year of the given date.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The given date"
+        },
+        {
+          "name": "options",
+          "desc": "The options"
+        }
+      ],
+      "returns": "The day of year"
+    }
+  },
+  {
+    "id": "CT07",
+    "funcao": "getQuarter",
+    "tier": "facil",
+    "loc": 8,
+    "branches": 0,
+    "score_complexidade": 8,
+    "arquivo_unidade": "unidades/getQuarter.ts",
+    "gabarito": {
+      "category": "Quarter Helpers",
+      "summary": "Get the year quarter of the given date.",
+      "description": "Get the year quarter of the given date.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The given date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The quarter"
+    }
+  },
+  {
+    "id": "CT08",
+    "funcao": "differenceInSeconds",
+    "tier": "facil",
+    "loc": 8,
+    "branches": 0,
+    "score_complexidade": 8,
+    "arquivo_unidade": "unidades/differenceInSeconds.ts",
+    "gabarito": {
+      "category": "Second Helpers",
+      "summary": "Get the number of seconds between the given dates.",
+      "description": "Get the number of seconds between the given dates.",
+      "params": [
+        {
+          "name": "laterDate",
+          "desc": "The later date"
+        },
+        {
+          "name": "earlierDate",
+          "desc": "The earlier date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options."
+        }
+      ],
+      "returns": "The number of seconds"
+    }
+  },
+  {
+    "id": "CT09",
+    "funcao": "isSameDay",
+    "tier": "facil",
+    "loc": 12,
+    "branches": 0,
+    "score_complexidade": 12,
+    "arquivo_unidade": "unidades/isSameDay.ts",
+    "gabarito": {
+      "category": "Day Helpers",
+      "summary": "Are the given dates in the same day (and year and month)?",
+      "description": "Are the given dates in the same day (and year and month)?",
+      "params": [
+        {
+          "name": "laterDate",
+          "desc": "The first date to check"
+        },
+        {
+          "name": "earlierDate",
+          "desc": "The second date to check"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The dates are in the same day (and year and month)"
+    }
+  },
+  {
+    "id": "CT10",
+    "funcao": "endOfISOWeek",
+    "tier": "facil",
+    "loc": 9,
+    "branches": 0,
+    "score_complexidade": 9,
+    "arquivo_unidade": "unidades/endOfISOWeek.ts",
+    "gabarito": {
+      "category": "ISO Week Helpers",
+      "summary": "Return the end of an ISO week for the given date.",
+      "description": "Return the end of an ISO week for the given date. The result will be in the local timezone.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The original date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The end of an ISO week"
+    }
+  },
+  {
+    "id": "CT11",
+    "funcao": "isSameWeek",
+    "tier": "medio",
+    "loc": 14,
+    "branches": 0,
+    "score_complexidade": 14,
+    "arquivo_unidade": "unidades/isSameWeek.ts",
+    "gabarito": {
+      "category": "Week Helpers",
+      "summary": "Are the given dates in the same week (and month and year)?",
+      "description": "Are the given dates in the same week (and month and year)?",
+      "params": [
+        {
+          "name": "laterDate",
+          "desc": "The first date to check"
+        },
+        {
+          "name": "earlierDate",
+          "desc": "The second date to check"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The dates are in the same week (and month and year)"
+    }
+  },
+  {
+    "id": "CT12",
+    "funcao": "toDate",
+    "tier": "medio",
+    "loc": 10,
+    "branches": 2,
+    "score_complexidade": 14,
+    "arquivo_unidade": "unidades/toDate.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Convert the given argument to an instance of Date.",
+      "description": "Convert the given argument to an instance of Date.",
+      "params": [
+        {
+          "name": "argument",
+          "desc": "The value to convert"
+        }
+      ],
+      "returns": "The parsed date in the local time zone"
+    }
+  },
+  {
+    "id": "CT13",
+    "funcao": "compareAsc",
+    "tier": "medio",
+    "loc": 10,
+    "branches": 4,
+    "score_complexidade": 18,
+    "arquivo_unidade": "unidades/compareAsc.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Compare the two dates and return -1, 0 or 1.",
+      "description": "Compare the two dates and return 1 if the first date is after the second, -1 if the first date is before the second or 0 if dates are equal.",
+      "params": [
+        {
+          "name": "dateLeft",
+          "desc": "The first date to compare"
+        },
+        {
+          "name": "dateRight",
+          "desc": "The second date to compare"
+        }
+      ],
+      "returns": "The result of the comparison"
+    }
+  },
+  {
+    "id": "CT14",
+    "funcao": "setYear",
+    "tier": "medio",
+    "loc": 14,
+    "branches": 3,
+    "score_complexidade": 20,
+    "arquivo_unidade": "unidades/setYear.ts",
+    "gabarito": {
+      "category": "Year Helpers",
+      "summary": "Set the year to the given date.",
+      "description": "Set the year to the given date.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to be changed"
+        },
+        {
+          "name": "year",
+          "desc": "The year of the new date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options."
+        }
+      ],
+      "returns": "The new date with the year set"
+    }
+  },
+  {
+    "id": "CT15",
+    "funcao": "addDays",
+    "tier": "medio",
+    "loc": 15,
+    "branches": 3,
+    "score_complexidade": 21,
+    "arquivo_unidade": "unidades/addDays.ts",
+    "gabarito": {
+      "category": "Day Helpers",
+      "summary": "Add the specified number of days to the given date.",
+      "description": "Add the specified number of days to the given date.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to be changed"
+        },
+        {
+          "name": "amount",
+          "desc": "The amount of days to be added."
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The new date with the days added"
+    }
+  },
+  {
+    "id": "CT16",
+    "funcao": "clamp",
+    "tier": "medio",
+    "loc": 21,
+    "branches": 0,
+    "score_complexidade": 21,
+    "arquivo_unidade": "unidades/clamp.ts",
+    "gabarito": {
+      "category": "Interval Helpers",
+      "summary": "Return a date bounded by the start and the end of the given interval.",
+      "description": "Clamps a date to the lower bound with the start of the interval and the upper bound with the end of the interval.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to be bounded"
+        },
+        {
+          "name": "interval",
+          "desc": "The interval to bound to"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The date bounded by the start and the end of the interval"
+    }
+  },
+  {
+    "id": "CT17",
+    "funcao": "areIntervalsOverlapping",
+    "tier": "medio",
+    "loc": 17,
+    "branches": 3,
+    "score_complexidade": 23,
+    "arquivo_unidade": "unidades/areIntervalsOverlapping.ts",
+    "gabarito": {
+      "category": "Interval Helpers",
+      "summary": "Is the given time interval overlapping with another time interval?",
+      "description": "Is the given time interval overlapping with another time interval? Adjacent intervals do not count as overlapping unless `inclusive` is set to `true`.",
+      "params": [
+        {
+          "name": "intervalLeft",
+          "desc": "The first interval to compare."
+        },
+        {
+          "name": "intervalRight",
+          "desc": "The second interval to compare."
+        },
+        {
+          "name": "options",
+          "desc": "The object with options"
+        }
+      ],
+      "returns": "Whether the time intervals are overlapping"
+    }
+  },
+  {
+    "id": "CT18",
+    "funcao": "sub",
+    "tier": "medio",
+    "loc": 21,
+    "branches": 1,
+    "score_complexidade": 23,
+    "arquivo_unidade": "unidades/sub.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Subtract the specified years, months, weeks, days, hours, minutes and seconds from the given date.",
+      "description": "Subtract the specified years, months, weeks, days, hours, minutes and seconds from the given date.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to be changed"
+        },
+        {
+          "name": "duration",
+          "desc": "The object with years, months, weeks, days, hours, minutes and seconds to be subtracted"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options | Key | Description | |---------|------------------------------------| | years | Amount of years to be subtracted | | months | Amount of months to be subtracted | | weeks | Amount of weeks to be subtracted | | days | Amount of days to be subtracted | | hours | Amount of hours to be subtracted | | minutes | Amount of minutes to be subtracted | | seconds | Amount of seconds to be subtracted | All values default to 0"
+        }
+      ],
+      "returns": "The new date with the seconds subtracted"
+    }
+  },
+  {
+    "id": "CT19",
+    "funcao": "max",
+    "tier": "medio",
+    "loc": 15,
+    "branches": 6,
+    "score_complexidade": 27,
+    "arquivo_unidade": "unidades/max.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Return the latest of the given dates.",
+      "description": "Return the latest of the given dates.",
+      "params": [
+        {
+          "name": "dates",
+          "desc": "The dates to compare"
+        }
+      ],
+      "returns": "The latest of the dates"
+    }
+  },
+  {
+    "id": "CT20",
+    "funcao": "startOfWeek",
+    "tier": "medio",
+    "loc": 21,
+    "branches": 5,
+    "score_complexidade": 31,
+    "arquivo_unidade": "unidades/startOfWeek.ts",
+    "gabarito": {
+      "category": "Week Helpers",
+      "summary": "Return the start of a week for the given date.",
+      "description": "Return the start of a week for the given date. The result will be in the local timezone.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The original date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The start of a week"
+    }
+  },
+  {
+    "id": "CT21",
+    "funcao": "getOverlappingDaysInIntervals",
+    "tier": "dificil",
+    "loc": 23,
+    "branches": 5,
+    "score_complexidade": 33,
+    "arquivo_unidade": "unidades/getOverlappingDaysInIntervals.ts",
+    "gabarito": {
+      "category": "Interval Helpers",
+      "summary": "Get the number of days that overlap in two time intervals",
+      "description": "Get the number of days that overlap in two time intervals. It uses the time between dates to calculate the number of days, rounding it up to include partial days.",
+      "params": [
+        {
+          "name": "intervalLeft",
+          "desc": "The first interval to compare."
+        },
+        {
+          "name": "intervalRight",
+          "desc": "The second interval to compare."
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The number of days that overlap in two time intervals"
+    }
+  },
+  {
+    "id": "CT22",
+    "funcao": "add",
+    "tier": "dificil",
+    "loc": 27,
+    "branches": 5,
+    "score_complexidade": 37,
+    "arquivo_unidade": "unidades/add.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Add the specified years, months, weeks, days, hours, minutes, and seconds to the given date.",
+      "description": "Add the specified years, months, weeks, days, hours, minutes, and seconds to the given date.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to be changed"
+        },
+        {
+          "name": "duration",
+          "desc": "The object with years, months, weeks, days, hours, minutes, and seconds to be added."
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The new date with the seconds added"
+    }
+  },
+  {
+    "id": "CT23",
+    "funcao": "intervalToDuration",
+    "tier": "dificil",
+    "loc": 25,
+    "branches": 6,
+    "score_complexidade": 37,
+    "arquivo_unidade": "unidades/intervalToDuration.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Convert interval to duration",
+      "description": "Convert an interval object to a duration object.",
+      "params": [
+        {
+          "name": "interval",
+          "desc": "The interval to convert to duration"
+        },
+        {
+          "name": "options",
+          "desc": "The context options"
+        }
+      ],
+      "returns": "The duration object"
+    }
+  },
+  {
+    "id": "CT24",
+    "funcao": "eachDayOfInterval",
+    "tier": "dificil",
+    "loc": 26,
+    "branches": 7,
+    "score_complexidade": 40,
+    "arquivo_unidade": "unidades/eachDayOfInterval.ts",
+    "gabarito": {
+      "category": "Interval Helpers",
+      "summary": "Return the array of dates within the specified time interval.",
+      "description": "Return the array of dates within the specified time interval.",
+      "params": [
+        {
+          "name": "interval",
+          "desc": "The interval."
+        },
+        {
+          "name": "options",
+          "desc": "An object with options."
+        }
+      ],
+      "returns": "The array with starts of days from the day of the interval start to the day of the interval end"
+    }
+  },
+  {
+    "id": "CT25",
+    "funcao": "differenceInBusinessDays",
+    "tier": "dificil",
+    "loc": 25,
+    "branches": 8,
+    "score_complexidade": 41,
+    "arquivo_unidade": "unidades/differenceInBusinessDays.ts",
+    "gabarito": {
+      "category": "Day Helpers",
+      "summary": "Get the number of business days between the given dates.",
+      "description": "Get the number of business day periods between the given dates. Business days being days that aren't in the weekend. Like `differenceInCalendarDays`, the function removes the times from the dates before calculating the difference.",
+      "params": [
+        {
+          "name": "laterDate",
+          "desc": "The later date"
+        },
+        {
+          "name": "earlierDate",
+          "desc": "The earlier date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The number of business days"
+    }
+  },
+  {
+    "id": "CT26",
+    "funcao": "differenceInMonths",
+    "tier": "dificil",
+    "loc": 30,
+    "branches": 7,
+    "score_complexidade": 44,
+    "arquivo_unidade": "unidades/differenceInMonths.ts",
+    "gabarito": {
+      "category": "Month Helpers",
+      "summary": "Get the number of full months between the given dates.",
+      "description": "",
+      "params": [
+        {
+          "name": "laterDate",
+          "desc": "The later date"
+        },
+        {
+          "name": "earlierDate",
+          "desc": "The earlier date"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The number of full months"
+    }
+  },
+  {
+    "id": "CT27",
+    "funcao": "formatDuration",
+    "tier": "dificil",
+    "loc": 26,
+    "branches": 9,
+    "score_complexidade": 44,
+    "arquivo_unidade": "unidades/formatDuration.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Formats a duration in human-readable format",
+      "description": "Return human-readable duration string i.e. \"9 months 2 days\"",
+      "params": [
+        {
+          "name": "duration",
+          "desc": "The duration to format"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options."
+        }
+      ],
+      "returns": "The formatted date string"
+    }
+  },
+  {
+    "id": "CT28",
+    "funcao": "eachWeekOfInterval",
+    "tier": "dificil",
+    "loc": 34,
+    "branches": 7,
+    "score_complexidade": 48,
+    "arquivo_unidade": "unidades/eachWeekOfInterval.ts",
+    "gabarito": {
+      "category": "Interval Helpers",
+      "summary": "Return the array of weeks within the specified time interval.",
+      "description": "Return the array of weeks within the specified time interval.",
+      "params": [
+        {
+          "name": "interval",
+          "desc": "The interval."
+        },
+        {
+          "name": "options",
+          "desc": "An object with options."
+        }
+      ],
+      "returns": "The array with starts of weeks from the week of the interval start to the week of the interval end"
+    }
+  },
+  {
+    "id": "CT29",
+    "funcao": "addBusinessDays",
+    "tier": "dificil",
+    "loc": 37,
+    "branches": 11,
+    "score_complexidade": 59,
+    "arquivo_unidade": "unidades/addBusinessDays.ts",
+    "gabarito": {
+      "category": "Day Helpers",
+      "summary": "Add the specified number of business days (mon - fri) to the given date.",
+      "description": "Add the specified number of business days (mon - fri) to the given date, ignoring weekends.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to be changed"
+        },
+        {
+          "name": "amount",
+          "desc": "The amount of business days to be added."
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The new date with the business days added"
+    }
+  },
+  {
+    "id": "CT30",
+    "funcao": "formatRelative",
+    "tier": "dificil",
+    "loc": 40,
+    "branches": 13,
+    "score_complexidade": 66,
+    "arquivo_unidade": "unidades/formatRelative.ts",
+    "gabarito": {
+      "category": "Common Helpers",
+      "summary": "Represent the date in words relative to the given base date.",
+      "description": "Represent the date in words relative to the given base date.",
+      "params": [
+        {
+          "name": "date",
+          "desc": "The date to format"
+        },
+        {
+          "name": "baseDate",
+          "desc": "The date to compare with"
+        },
+        {
+          "name": "options",
+          "desc": "An object with options"
+        }
+      ],
+      "returns": "The date in words"
+    }
+  }
+]
